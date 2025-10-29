@@ -3,15 +3,14 @@ project:
 
 book:
   title: "Justin's AWS Notes"
-  author: "Norah Jones"
+  author: "Justin Shaw"
   date: "2025-10-28"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - part: chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.qmd
+      chapters:
+      - chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.qmd
 
-bibliography: references.bib
 
 format:
   html:
