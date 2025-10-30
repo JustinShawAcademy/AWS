@@ -113,22 +113,22 @@
   {
     "objectID": "chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html",
     "href": "chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html",
-    "title": "AWS Fundamentals",
+    "title": "1. AWS Fundamentals",
     "section": "",
     "text": "This is the intro/summary of AWS Fundamentals",
     "crumbs": [
-      "AWS Fundamentals"
+      "1. AWS Fundamentals"
     ]
   },
   {
     "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html",
     "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html",
-    "title": "1  1.1 Core Concepts & Infrastructure",
+    "title": "1.1 Core Concepts & Infrastructure",
     "section": "",
-    "text": "This is a page within this chapter",
+    "text": "NOTE: {.column-screen-inset}\n\nVirtual Private Cloud (VPC) Basics\n\nCreate private networks within AWS that other private services will run from.\nConnect AWS private networks to on-prem networks when creating a hybrid enviornment.\nService to connect to other cloud platforms when creating a multi-cloud enviornment.\n\nThere is no way for VPC’s to communicate out/in. they’re private and isolated unless you decide otherwise.\nType of VPC:\n\nDefault VPC\n\nmaximum 1 per region, config. by AWS\n\nCustom VPC\n\nas many per region, config. by you\n\n\nThey are also regional resilient. This is how:",
     "crumbs": [
-      "AWS Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>1.1 Core Concepts & Infrastructure</span>"
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
     ]
   }
 ]

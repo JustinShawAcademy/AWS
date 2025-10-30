@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; 1.1 Core Concepts &amp; Infrastructure – Justin's AWS Notes</title>
+<title>1.1 Core Concepts &amp; Infrastructure – Justin’s AWS Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html">AWS Fundamentals</a></li><li class="breadcrumb-item"><a href="../../chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&amp;-Infrastructure.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1.1 Core Concepts &amp; Infrastructure</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html">1. AWS Fundamentals</a></li><li class="breadcrumb-item"><a href="../../chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&amp;-Infrastructure.html">1.1 Core Concepts &amp; Infrastructure</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">AWS Fundamentals</span></a>
+ <span class="menu-text">1. AWS Fundamentals</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&amp;-Infrastructure.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1.1 Core Concepts &amp; Infrastructure</span></span></a>
+ <span class="menu-text">1.1 Core Concepts &amp; Infrastructure</span></a>
   </div>
 </li>
       </ul>
@@ -137,15 +137,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#virtual-private-cloud-vpc-basics" id="toc-virtual-private-cloud-vpc-basics" class="nav-link active" data-scroll-target="#virtual-private-cloud-vpc-basics">Virtual Private Cloud (VPC) Basics</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html">AWS Fundamentals</a></li><li class="breadcrumb-item"><a href="../../chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&amp;-Infrastructure.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1.1 Core Concepts &amp; Infrastructure</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html">1. AWS Fundamentals</a></li><li class="breadcrumb-item"><a href="../../chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&amp;-Infrastructure.html">1.1 Core Concepts &amp; Infrastructure</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1.1 Core Concepts &amp; Infrastructure</span></h1>
+<h1 class="title">1.1 Core Concepts &amp; Infrastructure</h1>
 </div>
 
 
@@ -162,9 +168,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a page within this chapter</p>
+<p>NOTE: {.column-screen-inset}</p>
+<section id="virtual-private-cloud-vpc-basics" class="level1">
+<h1>Virtual Private Cloud (VPC) Basics</h1>
+<ol type="1">
+<li>Create private networks within AWS that other private services will run from.</li>
+<li>Connect AWS private networks to on-prem networks when creating a <strong>hybrid enviornment</strong>.</li>
+<li>Service to connect to other cloud platforms when creating a <strong>multi-cloud enviornment</strong>.</li>
+</ol>
+<p>There is no way for VPC’s to communicate out/in. they’re <em>private</em> and <em>isolated</em> unless you decide otherwise.</p>
+<p>Type of VPC:</p>
+<ul>
+<li>Default VPC
+<ul>
+<li>maximum 1 per region, config. by AWS</li>
+</ul></li>
+<li>Custom VPC
+<ul>
+<li>as many per region, config. by you</li>
+</ul></li>
+</ul>
+<p>They are also <strong>regional resilient</strong>. This is how:</p>
+<p><img src="../../images/vpc-isolation.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -569,8 +597,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html" class="pagination-link" aria-label="AWS Fundamentals">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">AWS Fundamentals</span>
+      <a href="../../chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html" class="pagination-link" aria-label="1. AWS Fundamentals">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. AWS Fundamentals</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
