@@ -7,9 +7,9 @@ book:
   date: "2025-10-28"
   chapters:
     - index.qmd
-    - part: chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.qmd
+    - part: chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.md
       chapters:
-      - chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.qmd
+      - chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.md
 
 
 format:
