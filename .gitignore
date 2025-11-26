@@ -1,9 +1,0 @@
-# Quarto output
-_book/
-.quarto/
-
-# Notebooks
-**/*.quarto_ipynb
-
-# macOS
-.DS_Store

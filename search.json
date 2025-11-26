@@ -1,0 +1,133 @@
+[
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html",
+    "href": "chapters/1-AWS-Fundamentals/1-AWS-Fundamentals.html",
+    "title": "1. AWS Fundamentals",
+    "section": "",
+    "text": "This is the intro/summary of AWS Fundamentals",
+    "crumbs": [
+      "1. AWS Fundamentals"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "",
+    "text": "Virtual Private Cloud (VPC) Basics\nNOTE: {.column-screen-inset}\nThere is no way for VPC’s to communicate out/in. they’re private and isolated unless you decide otherwise.\nType of VPC:\nThey are also regional resilient. This is how: They are depolyed in a region and broken down into Subnets. Each SN is inside one of the AV",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#default-vpc-facts",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#default-vpc-facts",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "Default VPC Facts",
+    "text": "Default VPC Facts\n\nDefault VPC CIDR is always 172.31.0.0/16\n/20 Subnet in each AZ in the region\n\nThe high the /number the smaller the network is\n\nFor example, two /17 networks can fit inside a /16 network\nFor example, 16 \\20 networks can fit inside a \\16 network\n\n\nProvides a Internet Gateway (IGW) to communicate with the internet and vice versa.\nSecurity Group (SG) and NACL for limiting incoming and outcoming\nSubnets assign public IPv4 addresses",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#instance-lifecycle",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#instance-lifecycle",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "Instance Lifecycle",
+    "text": "Instance Lifecycle\nThe storage (EBS) is still allocated to the instance regardless if it is running or stopped. See Stopped below. CPU, Memory, Storage, Networking respectivly",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#amazon-machine-image-ami",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#amazon-machine-image-ami",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "Amazon Machine Image (AMI)",
+    "text": "Amazon Machine Image (AMI)\nAn image of an EC2 instance.\nAn AMI can be used to create a EC2 instance OR an AMI can be created from an EC2 instance.\nRoot Volume: The drive that boots the OS. Block Device Mapping: Links the volumns that the AMI has and is presented to the OS. Determins which volumn is the boot volumn and which is the data volumn",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#connecting-to-ec2",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#connecting-to-ec2",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "Connecting to EC2",
+    "text": "Connecting to EC2\nYou can connect securely to an Amazon EC2 instance using SSH (Secure Shell). it’s the way AWS verifies you are you when you try to log in.\nThis key pair has:\nPublic key: stored on the EC2 instance.  Private key (.pem file): downloaded and kept only by you. Cannot be recovered later.",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#exam-power-up",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#exam-power-up",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "Exam Power Up",
+    "text": "Exam Power Up\n\nBucket name are Globally Unique\n3-63 characters, all lower case, no underscores\nStart with a lowercase letter or a number\nCan’t be IP formatted e.g. 1.1.1.1\nBuckets: 100 soft limit, 1000 hard per account (from requests)\n\nNote: because of the limit, it would not be wise the make a bucket for each user. We will cover this later\n\nUnlimited objects in a bucket, 0 bytes to 8 TB\nKey = Name, Value = Data",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#s3-patterns-and-anti-patterns",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#s3-patterns-and-anti-patterns",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "S3 Patterns and Anti-Patterns",
+    "text": "S3 Patterns and Anti-Patterns\n\nS3 is an object store - not file or block\nYou can’t mount an S3 bucket as a drive to VM’s\nGreat for large scale data storage, distrobution or upload\nGreat for offloading of instances\nINPUT and/or OUTPUT to many AWS products",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#minimal-read-cloudformation-example-yaml",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#minimal-read-cloudformation-example-yaml",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "Minimal Read CloudFormation Example (YAML)",
+    "text": "Minimal Read CloudFormation Example (YAML)\nAWSTemplateFormatVersion: \"2010-09-09\"\nDescription: Simple S3 bucket example\n\nResources:\n  MyBucket:\n    Type: AWS::S3::Bucket\n    Properties:\n      BucketName: my-example-bucket-12345\n\nOutputs:\n  BucketName:\n    Value: !Ref MyBucket\n    Description: Name of the created S3 bucket",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#high-availability-ha",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#high-availability-ha",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "High Availability (HA)",
+    "text": "High Availability (HA)\n“The system is up almost all the time”\nHA focuses on ensuring your application remains accessible even if a component (like a server or zone) fails. It accepts that a failure might cause a very brief “blip” (e.g., a database failover taking 60 seconds), but the system recovers automatically. - Key Concept: Redundancy and automatic failover. - Typical AWS Architecture: - Running EC2 instances in at least two Availability Zones (AZs) behind a Load Balancer. - Downtime: Users might experience a timeout or need to refresh the page, but service returns quickly.",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#fault-tolerance-ft",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#fault-tolerance-ft",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "Fault Tolerance (FT)",
+    "text": "Fault Tolerance (FT)\nFT is a step above HA. It guarantees that if a component fails, the system continues processing without any interruption or degradation. It requires far more complex and expensive infrastructure because you often need parallel systems processing the same data simultaneously.\n\nKey Concept: Zero interruption. The user never knows a failure occurred.\nTypical AWS Architecture:\n\nAmazon S3: It is designed for 99.999999999% durability. If a drive or rack fails, your data is still instantly available.\n\nDowntime: Zero.",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  },
+  {
+    "objectID": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#disaster-recovery-dr",
+    "href": "chapters/1-AWS-Fundamentals/1.1-Core-Concepts-&-Infrastructure.html#disaster-recovery-dr",
+    "title": "1.1 Core Concepts & Infrastructure",
+    "section": "Disaster Recovery (DR)",
+    "text": "Disaster Recovery (DR)\n“If the entire Region vanishes, we have a plan.”\nDR is about preparing for major events—hurricanes, earthquakes, or a total AWS Region outage (e.g., us-east-1 goes dark). It defines how you recover data and operations after the system has completely stopped (When HA and FT Fail).\n\nKey Concept: Recovery Time Objective (RTO) and Recovery Point Objective (RPO).\nTypical AWS Strategies:\n\nBackup & Restore: Storing EBS snapshots or RDS backups in S3 (lowest cost, slowest recovery).\nPilot Light: Keeping a tiny database running in a different region (e.g., us-west-2) and turning on the web servers only when disaster strikes.\nWarm Standby: A scaled-down version of your app running in a second region, ready to scale up.\nMulti-Region Active/Active: The “Gold Standard” (and most expensive) where traffic is load-balanced between two regions (e.g., Route 53 routing traffic to both N. Virginia and Oregon).",
+    "crumbs": [
+      "1. AWS Fundamentals",
+      "1.1 Core Concepts & Infrastructure"
+    ]
+  }
+]
